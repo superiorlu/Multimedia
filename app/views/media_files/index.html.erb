@@ -1,0 +1,18 @@
+<div id="upload">
+  <%= form_for :media_file, :url => {:action => "upload"}, :html => {:multipart => true, :method => :post} do |f| %>
+  <table class="table_one">
+      <tr>
+          <td><%=label_tag "uploaded_file", "上传媒体文件"%>:</td>
+          <td>
+           <%=f.file_field "uploaded_file"%> <span class="green"></span>
+          </td>
+          <td><%= f.submit "上传" %></td>
+      </tr>
+  </table>
+  
+<% end%>
+
+</div>
+<div id="list">
+
+</div>
