@@ -24,11 +24,11 @@ class MediaFile < ActiveRecord::Base
 
 private
 
- def clear_dir
-   `rm -R #{FILE_PATH}`
- end
+  def clear_dir
+    `rm -R #{FILE_PATH}`
+  end
 
- #将二进制程序写入文件
+  #将二进制程序写入文件
   def write_data_into_file 
     FileUtils.mkdir_p(File.dirname(path))
     File.open(path, 'wb') do |f|
